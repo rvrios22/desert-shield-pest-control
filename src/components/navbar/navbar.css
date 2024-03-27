@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 8px;
+}
+
+.navbar-links a {
+    font-size: clamp(12px, 2vw, 24px);
+    margin-left: .5em;
+}
