@@ -1,6 +1,12 @@
 :root {
   --text-shadow: #424242;
   --border-color: #d3d3d3;
+  --header-min: 22px;
+  --header-pref: 8vw;
+  --header-max: 30px;
+  --p-min: 16px;
+  --p-pref: 4vw;
+  --p-max: 20px;
 }
 /* Box sizing rules */
 *,
@@ -77,4 +83,8 @@ textarea:not([rows]) {
 
 body {
   margin: 0;
+}
+
+a:hover {
+  cursor: pointer;
 }

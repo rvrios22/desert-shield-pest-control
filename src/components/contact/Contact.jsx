@@ -48,7 +48,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container">
+    <div id="contact" className="contact-container">
       <h2>Get In Touch</h2>
       <p>We'd love to hear from you! Get in touch and we'll respond as quick as we can.</p>
       <form ref={form} onSubmit={sendEmail}>

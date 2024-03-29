@@ -3,7 +3,7 @@ import "./aboutMe.css";
 
 function AboutMe() {
   return (
-    <div className="about-me-container">
+    <div id="about-me" className="about-me-container">
       <h2 className="about-me-header">Our Story</h2>
       <p>
         With over 14 years of dedicated experience in the pest control industry,

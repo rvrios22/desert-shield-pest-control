@@ -7,8 +7,17 @@ header {
     align-items: center;
     padding: 2px 8px;
     z-index: 2;
+    transition: all 0.3s ease;
+}
+
+
+.header-background {
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid var(--border-color);
+}
+
+header a {
+    text-decoration: none;
 }
 
 header h1 {

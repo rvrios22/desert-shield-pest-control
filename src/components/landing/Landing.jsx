@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./landing.css";
-function Landing() {
+function Landing({ landingImgRef }) {
   const [imgSize, setImgSize] = useState({ width: 0, height: 0 });
   const handleImgSize = (e) => {
     setImgSize({
@@ -22,12 +22,13 @@ function Landing() {
   }, []);
 
   return (
-    <div className="landing-container">
+    <div id="landing" className="landing-container">
       <img
         src="/tempLanding.webp"
         alt="Pest Control Image"
         className="landing-img"
         onLoad={handleImgSize}
+        ref={landingImgRef}
         height={imgSize.height}
         width={imgSize.width}
       />
