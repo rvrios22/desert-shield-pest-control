@@ -22,14 +22,23 @@ function Landing() {
   }, []);
 
   return (
-    <img
-      src="/tempLanding.webp"
-      alt="Pest Control Image"
-      className="landing-img"
-      onLoad={handleImgSize}
-      height={imgSize.height}
-      width={imgSize.width}
-    />
+    <div className="landing-container">
+      <img
+        src="/tempLanding.webp"
+        alt="Pest Control Image"
+        className="landing-img"
+        onLoad={handleImgSize}
+        height={imgSize.height}
+        width={imgSize.width}
+      />
+      <div className="landing-text">
+        <h1>Desert Shield Pest Control</h1>
+        <p>Servicing the Whole Coachella Valley</p>
+      </div>
+      <p className="landing-est">
+        Est. 2024
+      </p>
+    </div>
   );
 }
 

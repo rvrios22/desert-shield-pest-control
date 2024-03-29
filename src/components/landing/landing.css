@@ -1,4 +1,40 @@
+.landing-container {
+    position: relative;
+}
+
 .landing-img {
     object-fit: cover;
-    opacity: .9;
+    opacity: .8;
+}
+
+.landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow:
+        -1px -1px 0 var(--text-shadow),
+        1px -1px 0 var(--text-shadow),
+        -1px 1px 0 var(--text-shadow),
+        1px 1px 0 var(--text-shadow);
+}
+
+.landing-text h1 {
+    margin: 0;
+    font-size: clamp(26px, 10vw, 40px);
+}
+
+.landing-est {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    text-shadow:
+        -1px -1px 0 var(--text-shadow),
+        1px -1px 0 var(--text-shadow),
+        -1px 1px 0 var(--text-shadow),
+        1px 1px 0 var(--text-shadow);
 }

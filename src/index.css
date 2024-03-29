@@ -1,3 +1,7 @@
+:root {
+  --text-shadow: #424242;
+  --border-color: #d3d3d3;
+}
 /* Box sizing rules */
 *,
 *::before,
