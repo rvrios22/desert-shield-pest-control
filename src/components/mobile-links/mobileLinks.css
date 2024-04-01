@@ -1,0 +1,28 @@
+.mobile-nav-overlay {
+    position: absolute;
+    width: 95%;
+    height: 33dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -500px;
+    background-color: burlywood;
+    border: 1px solid var(--border-color);
+    transition: all .35s linear;
+}
+
+.show {
+    transition: all .2s linear;
+    top: 5px;
+}
+
+.mobile-nav-overlay > * {
+    margin: 1.125em;
+    font-size: 1.125em;
+}
+
+.close-icon {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}

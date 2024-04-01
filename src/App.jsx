@@ -1,18 +1,18 @@
-import { useRef } from 'react'
-import './App.css'
-import { AboutMe, Contact, Footer, Landing, Navbar } from './componentExporter'
+import { useRef } from "react";
+import "./App.css";
+import { AboutMe, Contact, Footer, Landing, Navbar } from "./componentExporter";
 
 function App() {
-const landingImgRef = useRef(null)
+  const landingImgRef = useRef(null);
   return (
     <>
-      <Navbar landingImgRef={landingImgRef}/>
-      <Landing landingImgRef={landingImgRef}/>
+      <Navbar landingImgRef={landingImgRef} />
+      <Landing landingImgRef={landingImgRef} />
       <AboutMe />
       <Contact />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

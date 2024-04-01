@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./navbar.css";
+import NavbarLinks from "../navbar-links/NavbarLinks";
+import MobileLinks from "../mobile-links/MobileLinks";
+
 function Navbar({ landingImgRef }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [displayHamburger, setDisplayHamburger] = useState(true);
-  const [headerBackground, setHeaderBackground] = useState(true);
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +31,6 @@ function Navbar({ landingImgRef }) {
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (!entry.isIntersecting) {
           headerRef.current.classList.add("header-background");
         } else {
@@ -43,20 +44,24 @@ function Navbar({ landingImgRef }) {
       observer.disconnect();
     };
   }, []);
+
+  const handleScroll = (elementId) => {
+    const element = document.getElementById(elementId);
+    const elementRect = element.getBoundingClientRect();
+    const elementTop = elementRect.top + window.scrollY;
+
+    window.scroll({
+      top: elementTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header ref={headerRef}>
-      <a href="#landing">
-        <h1>DSPC</h1>
-      </a>
       {displayHamburger ? (
-        <div className="navbar-hamburger">
-          <img src="hamburger.svg" alt="menu icon" width="30" />
-        </div>
+        <MobileLinks handleScroll={handleScroll} />
       ) : (
-        <div className="navbar-links">
-          <a href="#about-me">About Me</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <NavbarLinks handleScroll={handleScroll} />
       )}
     </header>
   );

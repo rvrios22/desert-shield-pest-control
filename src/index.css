@@ -1,4 +1,5 @@
 :root {
+  --light-brown: #efd5af;
   --text-shadow: #424242;
   --border-color: #d3d3d3;
   --header-min: 22px;
@@ -20,6 +21,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -83,6 +85,7 @@ textarea:not([rows]) {
 
 body {
   margin: 0;
+  background-color: rgb(244, 244, 243);
 }
 
 a:hover {

@@ -1,11 +1,31 @@
-label, input, textarea {
+label,
+input,
+textarea {
     display: block;
     margin: 0 auto .5em;
     width: 100%;
+    max-width: 675px;
+}
+
+input,
+textarea {
+    border: 1px solid var(--border-color);
 }
 
 .contact-button {
+    all: unset;
     width: 33%;
+    max-width: 160px;
+    margin-bottom: .5em;
+    border: 1px solid var(--light-brown);
+    border-radius: 10px;
+    background-color: var(--light-brown);
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    color: white;
+    background-color: black;
 }
 
 .contact-container {

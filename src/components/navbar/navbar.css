@@ -12,20 +12,11 @@ header {
 
 
 .header-background {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--light-brown);
+    opacity: .9;
     border-bottom: 1px solid var(--border-color);
 }
 
 header a {
     text-decoration: none;
-}
-
-header h1 {
-    margin: 0;
-    font-size: clamp(26px, 5vw, 40px);
-}
-
-.navbar-links a {
-    font-size: clamp(12px, 2vw, 24px);
-    margin-left: .5em;
 }
