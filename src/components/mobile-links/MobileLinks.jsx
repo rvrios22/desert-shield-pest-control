@@ -11,6 +11,7 @@ function MobileLinks({ handleScroll }) {
     <>
       <a href="#landing">
         <h1>DSPC</h1>
+      {/* <img src="/logo.png" alt="desert shield pest control logo" width='100' height='100'/> */}
       </a>
       <div className="navbar-hamburger" onClick={handleShowing}>
         <img src="hamburger.svg" alt="menu icon" width="30" />

@@ -43,3 +43,8 @@ textarea {
 .contact-container p {
     margin: 0 auto .5em;
 }
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}

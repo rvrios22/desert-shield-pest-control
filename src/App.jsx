@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./App.css";
-import { AboutMe, Contact, Footer, Landing, Navbar } from "./componentExporter";
+import { AboutMe, Contact, ContactInfo, Footer, Landing, Navbar } from "./componentExporter";
 
 function App() {
   const landingImgRef = useRef(null);
@@ -10,6 +10,7 @@ function App() {
       <Landing landingImgRef={landingImgRef} />
       <AboutMe />
       <Contact />
+      <ContactInfo />
       <Footer />
     </>
   );

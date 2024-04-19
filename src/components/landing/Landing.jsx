@@ -24,7 +24,7 @@ function Landing({ landingImgRef }) {
   return (
     <div id="landing" className="landing-container">
       <img
-        src="/tempLanding.webp"
+        src="/landing.jpg"
         alt="Pest Control Image"
         className="landing-img"
         onLoad={handleImgSize}

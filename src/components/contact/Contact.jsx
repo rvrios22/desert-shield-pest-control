@@ -4,8 +4,15 @@ import Swal from "sweetalert2";
 import "./contact.css";
 
 function Contact() {
-  const [user, setUser] = useState({ name: "", email: "", tel: '', message: "" });
+  const [user, setUser] = useState({
+    name: "",
+    nameVerify: "",
+    email: "",
+    tel: "",
+    message: "",
+  });
   const form = useRef();
+  const recaptchaRef = useRef(null);
 
   const toastSuccess = Swal.mixin({
     toast: true,
@@ -25,6 +32,12 @@ function Contact() {
     setUser({
       ...user,
       name: e.target.value,
+    });
+  };
+  const handleNameVerifyChange = (e) => {
+    setUser({
+      ...user,
+      nameVerify: e.target.value,
     });
   };
   const handleEmailChange = (e) => {
@@ -48,6 +61,9 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if(user.nameVerify) {
+      return console.warn('bot detected')
+    }
 
     emailjs
       .sendForm(
@@ -69,7 +85,7 @@ function Contact() {
           });
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log("FAILED...", error);
           toastError.fire({
             icon: "error",
             title: "Oops",
@@ -83,7 +99,7 @@ function Contact() {
         setUser({
           name: "",
           email: "",
-          tel: '',
+          tel: "",
           message: "",
         });
       });
@@ -105,6 +121,18 @@ function Contact() {
           onChange={handleNameChange}
           placeholder="Please enter your name..."
         />
+        <div className="hidden">
+          <label htmlFor="name_verify">
+            Humans will not fill out this field
+          </label>
+          <input
+            type="text"
+            id="name_verify"
+            name="name_verify"
+            onChange={handleNameVerifyChange}
+            value={user.nameVerify}
+          />
+        </div>
         <label>Email</label>
         <input
           type="email"
